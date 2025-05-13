@@ -33,7 +33,7 @@ cd replayer/boards/mcimx93evk/demo_apps/ethosu_apps/armgcc/
 
 ---
 
-## Build “Hello World” TA
+## Build  replayer running in TEE
 
 ```bash
 cd replayer/boards/mcimx93evk/trustzone_examples/hello_world/hello_world_s/armgcc/
