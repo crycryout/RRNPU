@@ -9,7 +9,7 @@
 
 1. [Build Recorder](#build-recorder)
 2. [Build Replayer](#build-replayer)
-3. [Build “Hello World” TA](#build-hello-world-ta)
+3. [Build Replayer Running in TEE](#build-replayer-in-tee)
 4. [Build OP-TEE OS](#build-op-tee-os)
 5. [Build OP-TEE Inference TA & Client](#build-op-tee-inference-ta--client)
 
@@ -33,7 +33,7 @@ cd replayer/boards/mcimx93evk/demo_apps/ethosu_apps/armgcc/
 
 ---
 
-## Build  replayer running in TEE
+## Build  Replayer Running in TEE
 
 ```bash
 cd replayer/boards/mcimx93evk/trustzone_examples/hello_world/hello_world_s/armgcc/
