@@ -1,0 +1,28 @@
+{
+    "files.associations": {
+        "cstdio": "cpp",
+        "stdio.h": "c",
+        "string.h": "c",
+        "ethosu_log.h": "c",
+        "ethosu_interface.h": "c",
+        "ethosu_device.h": "c",
+        "ethosu_config_u65.h": "c",
+        "assert.h": "c",
+        "fsl_device_registers.h": "c",
+        "rpmsg_env.h": "c",
+        "complex": "c",
+        "sstream": "c",
+        "ethosu_types.h": "c",
+        "clock_config.h": "c",
+        "pmu_ethosu.h": "c",
+        "cmsis_compiler.h": "c",
+        "ethosu_shared.h": "c",
+        "replay.h": "c",
+        "replay_templates.h": "c",
+        "stdint.h": "c",
+        "stdbool.h": "c",
+        "pad_model.hpp": "c",
+        "strided_model.hpp": "c",
+        "replay_templates_relu.h": "c"
+    }
+}

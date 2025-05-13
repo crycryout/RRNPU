@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "algorithm": "cpp",
+        "core_mmu.h": "c",
+        "core_memprot.h": "c",
+        "tee_internal_api.h": "c",
+        "tee_internal_api_extensions.h": "c",
+        "stdlib.h": "c",
+        "replay.h": "c"
+    }
+    "workbench.colorCustomizations": {
+  "editorError.foreground": "#00000000"
+}
+
+}

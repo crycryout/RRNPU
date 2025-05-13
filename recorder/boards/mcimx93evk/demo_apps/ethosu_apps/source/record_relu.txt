@@ -1,0 +1,305 @@
+
+Initialize Arm Ethos-U
+I: ethosu_init called.
+I: Initializing NPU: base_address=4A900000, fast_memory=20480000, fast_memory_size=393216, secure=0, privileged=0
+I: ethosu_mutex_create called.
+I: ethosu_semaphore_create called.
+I: ethosu_dev_init called.
+D: ethosu_dev_init(): RD: CONFIG.word addr=4A900028, value=0x10003008, order=1
+I: ethosu_dev_soft_reset called.
+I: Soft reset NPU
+I: Test Case 7: soft reset NPU
+D: ethosu_dev_soft_reset(): WR: RESET.word addr=4A90000C, value=0x00000002, order=2
+D: ethosu_dev_soft_reset(): RD: STATUS.word addr=4A900004, full=0x00000000, order=3
+I: Test Case 15: reset.pending_CPL=0x0, pending_CSL=0x1
+I: ethosu_dev_verify_access_state called.
+D: ethosu_dev_verify_access_state(): RD: PROT.word value=0x00000002, order=4
+I: ethosu_dev_axi_init called.
+D: ethosu_dev_axi_init(): WR: QCONFIG.word addr=4A90001C, value=0x00000002, order=5
+D: ethosu_dev_axi_init(): WR: REGIONCFG.word addr=4A90003C, value=0x0000555f, order=6
+D: ethosu_dev_axi_init(): WR: AXI_LIMIT0.word addr=4A900040, value=0x1f3f00b0, order=7
+D: ethosu_dev_axi_init(): WR: AXI_LIMIT1.word addr=4A900044, value=0x1f3f00b0, order=8
+D: ethosu_dev_axi_init(): WR: AXI_LIMIT2.word addr=4A900048, value=0x1f3f00b0, order=9
+D: ethosu_dev_axi_init(): WR: AXI_LIMIT3.word addr=4A90004C, value=0x1f3f00b0, order=10
+I: ethosu_semaphore_create called.
+I: ethosu_reset_job called.
+I: ethosu_register_driver called.
+I: New NPU driver registered (handle: 0x20008C60, NPU: 0x4A900000)
+Tensor arena region cleared successfully.
+I: Running inference job, name: job, type: Model
+268331093
+准备执行 op: ethos-u, 函数指针: FFE6855
+Entering MicroInterpreterContext::AllocateTempTfLiteTensor, tensor_idx: 0
+Entering MicroAllocator::AllocateTempTfLiteTensor, tensor_index: 0, subgraph_index: 0
+SubGraph pointer: 20480260
+Allocated temp TfLiteTensor pointer: 20484090
+Entering PopulateTfLite
+Entering InitializeTfLiteTensorFromFlatbuffer
+Converting tensor type...
+Setting is_variable flag...
+Getting tensor buffer from flatbuffer...
+Tensor buffer is valid, setting allocation type to kTfLiteMmapRo
+Calculating bytes required for tensor...
+Bytes required: 272, type_size: 1
+Converting flatbuffer tensor shape to TfLiteIntArray...
+No valid quantization information found.
+Exiting InitializeTfLiteTensorFromFlatbuffer, returning kTfLiteOk
+Populated TfLiteTensor from flatbuffer successfully.
+subgraph_allocations is not null, copying tensor data.
+Exiting MicroAllocator::AllocateTempTfLiteTensor, returning tensor: 20484090
+Exiting MicroInterpreterContext::AllocateTempTfLiteTensor, tensor: 20484090
+Entering PopulateTfLite
+Entering InitializeTfLiteTensorFromFlatbuffer
+Converting tensor type...
+Setting is_variable flag...
+Getting tensor buffer from flatbuffer...
+Tensor buffer is nullptr, setting allocation type to kTfLiteArenaRw
+Calculating bytes required for tensor...
+Bytes required: 5120, type_size: 2
+Converting flatbuffer tensor shape to TfLiteIntArray...
+Copying quantization information...
+Quantization channels: 1
+Allocated TfLiteAffineQuantization: 204DFEC4
+Allocating memory for quantization->zero_point...
+Allocated quantization->zero_point: 204DFEBC
+Filling quantization->zero_point data...
+zero_point_data[0] = 0
+Exiting InitializeTfLiteTensorFromFlatbuffer, returning kTfLiteOk
+Entering PopulateTfLite
+Entering InitializeTfLiteTensorFromFlatbuffer
+Converting tensor type...
+Setting is_variable flag...
+Getting tensor buffer from flatbuffer...
+Tensor buffer is nullptr, setting allocation type to kTfLiteArenaRw
+Calculating bytes required for tensor...
+Bytes required: 5120, type_size: 2
+Converting flatbuffer tensor shape to TfLiteIntArray...
+Copying quantization information...
+Quantization channels: 1
+Allocated TfLiteAffineQuantization: 204DFE84
+Allocating memory for quantization->zero_point...
+Allocated quantization->zero_point: 204DFE7C
+Filling quantization->zero_point data...
+zero_point_data[0] = 0
+Exiting InitializeTfLiteTensorFromFlatbuffer, returning kTfLiteOk
+I: ETHOSU_PMU_Enable called.
+D: ETHOSU_PMU_Enable(): Enable PMU
+I: ethosu_request_power called.
+I: ethosu_soft_reset called.
+I: ethosu_dev_soft_reset called.
+I: Soft reset NPU
+I: Test Case 7: soft reset NPU
+D: ethosu_dev_soft_reset(): WR: RESET.word addr=4A90000C, value=0x00000002, order=11
+D: ethosu_dev_soft_reset(): RD: STATUS.word addr=4A900004, full=0x00000000, order=12
+I: Test Case 15: reset.pending_CPL=0x0, pending_CSL=0x1
+I: ethosu_dev_verify_access_state called.
+D: ethosu_dev_verify_access_state(): RD: PROT.word value=0x00000002, order=13
+I: ethosu_dev_axi_init called.
+D: ethosu_dev_axi_init(): WR: QCONFIG.word addr=4A90001C, value=0x00000002, order=14
+D: ethosu_dev_axi_init(): WR: REGIONCFG.word addr=4A90003C, value=0x0000555f, order=15
+D: ethosu_dev_axi_init(): WR: AXI_LIMIT0.word addr=4A900040, value=0x1f3f00b0, order=16
+D: ethosu_dev_axi_init(): WR: AXI_LIMIT1.word addr=4A900044, value=0x1f3f00b0, order=17
+D: ethosu_dev_axi_init(): WR: AXI_LIMIT2.word addr=4A900048, value=0x1f3f00b0, order=18
+D: ethosu_dev_axi_init(): WR: AXI_LIMIT3.word addr=4A90004C, value=0x1f3f00b0, order=19
+I: ethosu_dev_set_clock_and_power called.
+D: ethosu_dev_set_clock_and_power(): RD: CMD.word addr=4A900008, value=0x0000000c, order=20
+D: ethosu_dev_set_clock_and_power(): WR: CMD.word addr=4A900008, value=0x00000000, order=21
+I: Test Case 4: power_q_enable 0x0
+I: Test Case 5: clock_q_enable 0x0
+I: ETHOSU_PMU_Set_EVTYPER called.
+I: pmu_event_value called.
+D: ETHOSU_PMU_Set_EVTYPER(): num=0, type=0, val=0
+I: ETHOSU_PMU_CNTR_Enable called.
+D: ETHOSU_PMU_CNTR_Enable(): mask=0x00000001
+I: ETHOSU_PMU_Set_EVTYPER called.
+I: pmu_event_value called.
+D: ETHOSU_PMU_Set_EVTYPER(): num=1, type=0, val=0
+I: ETHOSU_PMU_CNTR_Enable called.
+D: ETHOSU_PMU_CNTR_Enable(): mask=0x00000002
+I: ETHOSU_PMU_Set_EVTYPER called.
+I: pmu_event_value called.
+D: ETHOSU_PMU_Set_EVTYPER(): num=2, type=0, val=0
+I: ETHOSU_PMU_CNTR_Enable called.
+D: ETHOSU_PMU_CNTR_Enable(): mask=0x00000004
+I: ETHOSU_PMU_Set_EVTYPER called.
+I: pmu_event_value called.
+D: ETHOSU_PMU_Set_EVTYPER(): num=3, type=0, val=0
+I: ETHOSU_PMU_CNTR_Enable called.
+D: ETHOSU_PMU_CNTR_Enable(): mask=0x00000008
+I: ETHOSU_PMU_EVCNTR_ALL_Reset called.
+D: ETHOSU_PMU_EVCNTR_ALL_Reset(): Reset all events
+I: ethosu_reserve_driver called.
+I: ethosu_mutex_lock called.
+I: ethosu_find_and_reserve_driver called.
+I: NPU driver handle 20008C60 reserved.
+I: ethosu_mutex_unlock called.
+I: ethosu_invoke_v3 called.
+I: ethosu_invoke_async called.
+I: custom_data_ptr: 0x20480130, custom_data_size 272
+I: base_addr[0]: 0
+I: base_addr[1]: 20484000
+I: base_addr[2]: 0
+I: base_addr[3]: 20484000
+I: base_addr[4]: 20484000
+I: Updated base_addr[0]: 0
+I: Updated base_addr[1]: 20484000
+I: Updated base_addr[2]: 20480000
+I: Updated base_addr[3]: 20484000
+I: Updated base_addr[4]: 20484000
+I: OPTIMIZER_CONFIG
+I: handle_optimizer_config called.
+I: Optimizer release nbr: 0 patch: 1
+I: ethosu_dev_verify_optimizer_config called.
+D: ethosu_dev_verify_optimizer_config(): RD: CONFIG.word addr=4A900028, value=0x10003008, order=22
+D: ethosu_dev_verify_optimizer_config(): RD: ID.word addr=4A900000, value=0x10066001, order=23
+I: Optimizer config. product=1, cmd_stream_version=0, macs_per_cc=8, shram_size=48, custom_dma=0
+I: Optimizer config. arch version: 1.0.6
+I: Ethos-U config. product=1, cmd_stream_version=0, macs_per_cc=8, shram_size=48, custom_dma=0
+I: Ethos-U. arch version=1.0.6
+I: Test Case 16: handle_optimizer_config: NPU config match
+I: Test Case 17: handle_optimizer_config: NPU arch match
+I: NOP
+I: NOP
+I: NOP
+I: COMMAND_STREAM
+I: handle_command_stream called.
+I: handle_command_stream: cmd_stream=20480150, cms_length 60
+I: ethosu_flush_dcache called.
+I: ethosu_flush_dcache called.
+I: ethosu_flush_dcache called.
+I: ethosu_flush_dcache called.
+I: ethosu_flush_dcache called.
+I: ethosu_flush_dcache called.
+I: ethosu_request_power called.
+I: ethosu_inference_begin called.
+I: ethosu_dev_run_command_stream called.
+D: ethosu_dev_run_command_stream(): QBASE=0x0000000020480154, QSIZE=240, base_pointer_offset=0x00000004
+I: Record 24: Data snapshot at 0x20480150 (size 240 bytes): 23 01 00 00 24 40 20 00 00 cd cc 4c 0f 01 01 00 00 40 00 00 00 00 00 00 01 40 00 00 00 00 00 00 02 40 00 00 00 00 00 00 03 40 00 00 00 00 00 00 0b 01 01 00 0c 01 01 00 0a 01 4f 00 04 01 0f 00 06 40 00 00 02 00 00 00 05 40 00 00 00 0a 00 00 04 40 00 00 20 00 00 00 09 01 00 00 05 01 05 00 07 01 00 00 1f 01 01 00 10 40 00 00 00 00 00 00 11 40 00 00 00 00 00 00 12 40 00 00 00 00 00 00 13 40 00 00 00 00 00 00 1b 01 01 00 1c 01 01 00 1a 01 4f 00 12 01 01 00 11 01 4f 00 13 01 0f 00 16 40 00 00 02 00 00 00 15 40 00 00 00 0a 00 00 14 40 00 00 20 00 00 00 18 01 00 00 14 01 03 01 25 01 00 00 26 01 00 80 27 01 ff 7f 16 01 01 00 15 01 3f 00 17 01 0f 00 0d 01 2e 00 2d 01 2e 00 24 01 01 00 2f 01 00 00 06 00 05 00 00 00 ff ff
+D: ethosu_dev_run_command_stream(): WR: QBASE.word[0] addr=4A900010, value=0x20480154, order=25
+D: ethosu_dev_run_command_stream(): WR: QBASE.word[1] addr=4A900014, value=0x00000000, order=26
+D: ethosu_dev_run_command_stream(): WR: QSIZE.word addr=4A900020, value=0x000000f0, order=27
+D: ethosu_dev_run_command_stream(): BASEP0=0x0000000000000004
+D: ethosu_dev_run_command_stream(): WR: BASEP[0].word[0] addr=4A900080, value=0x00000004, order=29
+D: ethosu_dev_run_command_stream(): WR: BASEP[0].word[1] addr=4A900084, value=0x00000000, order=30
+D: ethosu_dev_run_command_stream(): BASEP1=0x0000000020484004
+I: Record 31: Data snapshot at 0x20484000 (size 1696 bytes): 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+D: ethosu_dev_run_command_stream(): WR: BASEP[1].word[0] addr=4A900088, value=0x20484004, order=32
+D: ethosu_dev_run_command_stream(): WR: BASEP[1].word[1] addr=4A90008C, value=0x00000000, order=33
+D: ethosu_dev_run_command_stream(): BASEP2=0x0000000020480004
+I: Record 34: Data snapshot at 0x20480000 (size 1696 bytes): 24 00 00 00 54 46 4c 33 00 00 00 00 00 00 00 00 00 00 12 00 1c 00 18 00 14 00 10 00 0c 00 08 00 00 00 04 00 12 00 00 00 18 00 00 00 70 00 00 00 24 06 00 00 14 02 00 00 38 06 00 00 03 00 00 00 02 00 00 00 38 00 00 00 04 00 00 00 d8 ff ff ff 04 00 00 00 04 00 00 00 17 00 00 00 4f 66 66 6c 69 6e 65 4d 65 6d 6f 72 79 41 6c 6c 6f 63 61 74 69 6f 6e 00 08 00 0c 00 08 00 04 00 08 00 00 00 03 00 00 00 04 00 00 00 0c 00 00 00 76 65 6c 61 5f 76 65 72 73 69 6f 6e 00 00 00 00 05 00 00 00 a4 01 00 00 80 00 00 00 5c 00 00 00 38 00 00 00 04 00 00 00 96 ff ff ff 04 00 00 00 24 00 00 00 00 00 00 00 01 00 00 00 06 00 00 00 ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c6 ff ff ff 04 00 00 00 06 00 00 00 33 2e 31 32 2e 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 e6 ff ff ff 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 06 00 08 00 04 00 06 00 00 00 04 00 00 00 10 01 00 00 43 4f 50 31 01 00 10 00 08 30 00 10 00 00 06 10 05 00 00 00 05 00 00 00 05 00 00 00 02 00 3c 00 23 01 00 00 24 40 20 00 00 cd cc 4c 0f 01 01 00 00 40 00 00 00 00 00 00 01 40 00 00 00 00 00 00 02 40 00 00 00 00 00 00 03 40 00 00 00 00 00 00 0b 01 01 00 0c 01 01 00 0a 01 4f 00 04 01 0f 00 06 40 00 00 02 00 00 00 05 40 00 00 00 0a 00 00 04 40 00 00 20 00 00 00 09 01 00 00 05 01 05 00 07 01 00 00 1f 01 01 00 10 40 00 00 00 00 00 00 11 40 00 00 00 00 00 00 12 40 00 00 00 00 00 00 13 40 00 00 00 00 00 00 1b 01 01 00 1c 01 01 00 1a 01 4f 00 12 01 01 00 11 01 4f 00 13 01 0f 00 16 40 00 00 02 00 00 00 15 40 00 00 00 0a 00 00 14 40 00 00 20 00 00 00 18 01 00 00 14 01 03 01 25 01 00 00 26 01 00 80 27 01 ff 7f 16 01 01 00 15 01 3f 00 17 01 0f 00 0d 01 2e 00 2d 01 2e 00 24 01 01 00 2f 01 00 00 06 00 05 00 00 00 ff ff 04 00 04 00 04 00 00 00 01 00 00 00 14 00 00 00 00 00 0e 00 18 00 14 00 10 00 0c 00 08 00 04 00 0e 00 00 00 e8 03 00 00 10 00 00 00 74 00 00 00 78 00 00 00 7c 00 00 00 01 00 00 00 1c 00 00 00 00 00 16 00 18 00 00 00 14 00 10 00 00 00 00 00 08 00 00 00 04 00 0c 00 16 00 00 00 14 00 00 00 14 00 00 00 18 00 00 00 18 00 00 00 1c 00 00 00 00 00 00 00 03 00 00 00 01 04 01 00 00 00 00 00 01 00 00 00 05 00 00 00 05 00 00 00 00 00 00 00 01 00 00 00 02 00 00 00 03 00 00 00 04 00 00 00 01 00 00 00 05 00 00 00 01 00 00 00 04 00 00 00 06 00 00 00 20 03 00 00 e0 02 00 00 ac 02 00 00 68 02 00 00 c4 00 00 00 04 00 00 00 52 ff ff ff 10 00 00 00 44 00 00 00 00 00 00 07 88 00 00 00 44 ff ff ff 10 00 00 00 18 00 00 00 1c 00 00 00 20 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 bc 51 0d 3c 01 00 00 00 a1 50 8d 43 01 00 00 00 51 51 a7 c2 44 00 00 00 73 74 72 65 61 6d 61 62 6c 65 5f 6d 6f 64 65 6c 5f 31 30 2f 75 6e 65 74 5f 30 2f 65 6e 63 6f 64 65 72 5f 31 2f 63 6f 6e 76 32 64 5f 33 78 33 2f 61 63 74 69 76 61 74 69 6f 6e 2f 4c 65 61 6b 79 52 65 6c 75 00 00 00 00 04 00 00 00 01 00 00 00 02 00 00 00 50 00 00 00 10 00 00 00 00 00 0e 00 14 00 10 00 0f 00 00 00 08 00 04 00 0e 00 00 00 1c 00 00 00 50 00 00 00 00 00 00 07 7c 01 00 00 0c 00 14 00 10 00 0c 00 08 00 04 00 0c 00 00 00 10 00 00 00 18 00 00 00 1c 00 00 00 20 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 bc 51 0d 3c 01 00 00 00 a1 50 8d 43 01 00 00 00 6e 6e 8b c3 2d 01 00 00 73 74 72 65 61 6d 61 62 6c 65 5f 6d 6f 64 65 6c 5f 31 30 2f 75 6e 65 74 5f 30 2f 65 6e 63 6f 64 65 72 5f 30 2f 63 6f 6e 76 32 64 5f 33 78 34 5f 61 2f 63 6f 6e 76 2f 63 6f 6e 76 32 64 5f 31 39 32 2f 42 69 61 73 41 64 64 3b 73 74 72 65 61 6d 61 62 6c 65 5f 6d 6f 64 65 6c 5f 31 30 2f 75 6e 65 74 5f 30 2f 64 65 63 6f 64 65 72 5f 31 2f 73 68 6f 72 74 63 75 74 2f 63 6f 6e 76 31 78 31 2f 63 6f 6e 76 2f 43 6f 6e 76 32 44 3b 73 74 72 65 61 6d 61 62 6c 65 5f 6d 6f 64 65 6c 5f 31 30 2f 75 6e 65 74 5f 30 2f 65 6e 63 6f 64 65 72 5f 30 2f 63 6f 6e 76 32 64 5f 33 78 34 5f 61 2f 63 6f 6e 76 2f 63 6f 6e 76 32 64 5f 31 39 32 2f 43 6f 6e 76 32 44 3b 73 74 72 65 61 6d 61 62 6c 65 5f 6d 6f 64 65 6c 5f 31 30 2f 75 6e 65 74 5f 30 2f 65 6e 63 6f 64 65 72 5f 30 2f 63 6f 6e 76 32 64 5f 33 78 34 5f 61 2f 63 6f 6e 76 2f 63 6f 6e 76 32 64 5f 31 39 32 2f 42 69 61 73 41 64 64 2f 52 65 61 64 56 61 72 69 61 62 6c 65 4f 70 00 00 00 04 00 00 00 01 00 00 00 02 00 00 00 50 00 00 00 10 00 00 00 cc ff ff ff 0c 00 00 00 00 00 00 03 20 00 00 00 15 00 00 00 5f 73 70 6c 69 74 5f 31 5f 73 63 72 61 74 63 68 5f 66 61 73 74 00 00 00 01 00 00 00 00 00 00 00 0c 00 10 00 0c 00 0b 00 00 00 04 00 0c 00 00 00 0c 00 00 00 00 00 00 03 1c 00 00 00 10 00 00 00 5f 73 70 6c 69 74 5f 31 5f 73 63 72 61 74 63 68 00 00 00 00 01 00 00 00 00 14 00 00 d0 ff ff ff 10 00 00 00 02 00 00 00 00 00 00 03 18 00 00 00 0e 00 00 00 5f 73 70 6c 69 74 5f 31 5f 66 6c 61 73 68 00 00 01 00 00 00 00 00 00 00 0c 00 14 00 10 00 0f 00 08 00 04 00 0c 00 00 00 10 00 00 00 01 00 00 00 00 00 00 03 20 00 00 00 17 00 00 00 5f 73 70 6c 69 74 5f 31 5f 63 6f 6d 6d 61 6e 64 5f 73 74 72 65 61 6d 00 01 00 00 00 10 01 00 00 00 00 00 00 00 00 00 00 15 00 00 00 56 65 6c 61 20 33 2e 31 32 2e 30 20 4f 70 74 69 6d 69 73 65 64 00 00 00 01 00 00 00 10 00 00 00 0c 00 10 00 0f 00 04 00 00 00 08 00 0c 00 00 00 0c 00 00 00 20 00 00 00 00 00 00 20 07 00 00 00 65 74 68 6f 73 2d 75 00
+D: ethosu_dev_run_command_stream(): WR: BASEP[2].word[0] addr=4A900090, value=0x20480004, order=35
+D: ethosu_dev_run_command_stream(): WR: BASEP[2].word[1] addr=4A900094, value=0x00000000, order=36
+D: ethosu_dev_run_command_stream(): BASEP3=0x0000000020484004
+I: Record 37: Data snapshot at 0x20484000 (size 1696 bytes): 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+D: ethosu_dev_run_command_stream(): WR: BASEP[3].word[0] addr=4A900098, value=0x20484004, order=38
+D: ethosu_dev_run_command_stream(): WR: BASEP[3].word[1] addr=4A90009C, value=0x00000000, order=39
+D: ethosu_dev_run_command_stream(): BASEP4=0x0000000020484004
+I: Record 40: Data snapshot at 0x20484000 (size 1696 bytes): 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+D: ethosu_dev_run_command_stream(): WR: BASEP[4].word[0] addr=4A9000A0, value=0x20484004, order=41
+D: ethosu_dev_run_command_stream(): WR: BASEP[4].word[1] addr=4A9000A4, value=0x00000000, order=42
+D: ethosu_dev_run_command_stream(): RD: CMD.word addr=4A900008, value=0x00000000, order=43
+I: ethosu_irq_handler called.
+I: Got interrupt from Ethos-U
+I: Test Case 8: Got interrupt from Ethos-U
+I: ethosu_dev_handle_interrupt called.
+D: ethosu_dev_handle_interrupt(): RD: CMD.word addr=4A900008, value=0x00000000, order=45
+D: ethosu_dev_handle_interrupt(): WR: CMD.word addr=4A900008, value=0x00000002, order=46
+D: ethosu_dev_handle_interrupt(): RD: STATUS.word addr=4A900004, value=0xffff0020, order=47
+D: ethosu_dev_handle_interrupt(): RD: QREAD.word addr=4A900018, value=0x000000f0, order=48
+I: bus_status=0, cmd_parse_error=0, wd_fault=0, ecc_fault=0, cmd_end_reached=1, full_status=0xffff0020
+I: QREAD (cmd‑stream offset) = 240
+I: Record 49: Data snapshot at 0x20484000 (size 128 bytes): 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+D: ethosu_dev_handle_interrupt(): Record inference result snapshot: addr=20484000, size=128, order=49
+I: ethosu_semaphore_give called.
+D: ethosu_dev_run_command_stream(): WR: CMD.word addr=4A900008, value=0x00000001, order=44
+I: Test Case 6: transition_to_running_state 1
+I: ethosu_wait called.
+I: ethosu_semaphore_take called.
+I: ethosu_inference_end called.
+I: ethosu_release_power called.
+I: ethosu_invalidate_dcache called.
+I: ethosu_invalidate_dcache called.
+I: ethosu_invalidate_dcache called.
+I: ethosu_invalidate_dcache called.
+I: ethosu_invalidate_dcache called.
+I: Test Case 18: read at end of command stream
+I: Inference finished successfully...
+I: ethosu_reset_job called.
+I: ethosu_release_driver called.
+I: ethosu_mutex_lock called.
+I: NPU driver handle 20008C60 released
+I: ethosu_semaphore_give called.
+I: ethosu_mutex_unlock called.
+I: ETHOSU_PMU_Get_EVCNTR called.
+D: ETHOSU_PMU_Get_EVCNTR(): num=0, val=0
+I: ETHOSU_PMU_Get_EVCNTR called.
+D: ETHOSU_PMU_Get_EVCNTR(): num=1, val=0
+I: ETHOSU_PMU_Get_EVCNTR called.
+D: ETHOSU_PMU_Get_EVCNTR(): num=2, val=0
+I: ETHOSU_PMU_Get_EVCNTR called.
+D: ETHOSU_PMU_Get_EVCNTR(): num=3, val=0
+arena_used_bytes : 5588
+num_of_outputs: 1
+output_begin
+[
+{
+"dims": [4,1,2,80,16],
+"data_address": "20484000",
+"data_bytes": 5120,
+                   "crc32": "6b3cce6a"
+}]
+output_end
+I:
+
+I: Finished running job: job
+Inference status: success
+I: Record 1 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:255, ethosu_dev_init): Type:READ, Address:0x4a900028, Value:0x10003008
+I: Record 2 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:742, ethosu_dev_soft_reset): Type:WRITE, Address:0x4a90000c, Value:0x00000002
+I: Record 3 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:764, ethosu_dev_soft_reset): Type:READ, Address:0x4a900004, Value:0x00000000
+I: Record 4 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:701, ethosu_dev_verify_access_state): Type:READ, Address:0x4a900024, Value:0x00000002
+I: Record 5 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:315, ethosu_dev_axi_init): Type:WRITE, Address:0x4a90001c, Value:0x00000002
+I: Record 6 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:333, ethosu_dev_axi_init): Type:WRITE, Address:0x4a90003c, Value:0x0000555f
+I: Record 7 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:363, ethosu_dev_axi_init): Type:WRITE, Address:0x4a900040, Value:0x1f3f00b0
+I: Record 8 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:371, ethosu_dev_axi_init): Type:WRITE, Address:0x4a900044, Value:0x1f3f00b0
+I: Record 9 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:379, ethosu_dev_axi_init): Type:WRITE, Address:0x4a900048, Value:0x1f3f00b0
+I: Record 10 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:387, ethosu_dev_axi_init): Type:WRITE, Address:0x4a90004c, Value:0x1f3f00b0
+I: Record 11 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:742, ethosu_dev_soft_reset): Type:WRITE, Address:0x4a90000c, Value:0x00000002
+I: Record 12 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:764, ethosu_dev_soft_reset): Type:READ, Address:0x4a900004, Value:0x00000000
+I: Record 13 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:701, ethosu_dev_verify_access_state): Type:READ, Address:0x4a900024, Value:0x00000002
+I: Record 14 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:315, ethosu_dev_axi_init): Type:WRITE, Address:0x4a90001c, Value:0x00000002
+I: Record 15 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:333, ethosu_dev_axi_init): Type:WRITE, Address:0x4a90003c, Value:0x0000555f
+I: Record 16 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:363, ethosu_dev_axi_init): Type:WRITE, Address:0x4a900040, Value:0x1f3f00b0
+I: Record 17 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:371, ethosu_dev_axi_init): Type:WRITE, Address:0x4a900044, Value:0x1f3f00b0
+I: Record 18 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:379, ethosu_dev_axi_init): Type:WRITE, Address:0x4a900048, Value:0x1f3f00b0
+I: Record 19 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:387, ethosu_dev_axi_init): Type:WRITE, Address:0x4a90004c, Value:0x1f3f00b0
+I: Record 20 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:856, ethosu_dev_set_clock_and_power): Type:READ, Address:0x4a900008, Value:0x0000000c
+I: Record 21 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:874, ethosu_dev_set_clock_and_power): Type:WRITE, Address:0x4a900008, Value:0x00000000
+I: Record 22 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:901, ethosu_dev_verify_optimizer_config): Type:READ, Address:0x4a900028, Value:0x10003008
+I: Record 23 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:909, ethosu_dev_verify_optimizer_config): Type:READ, Address:0x4a900000, Value:0x10066001
+I: Record 24 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:416, ethosu_dev_run_command_stream): Type:READ, Address:0x20480150, Value:0x00000000
+I: Record 25 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:428, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a900010, Value:0x20480154
+I: Record 26 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:440, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a900014, Value:0x00000000
+I: Record 27 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:453, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a900020, Value:0x000000f0
+I: Record 28 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:469, ethosu_dev_run_command_stream): Type:READ, Address:0, Value:0x00000000
+I: Record 29 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:484, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a900080, Value:0x00000004
+I: Record 30 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:496, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a900084, Value:0x00000000
+I: Record 31 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:469, ethosu_dev_run_command_stream): Type:READ, Address:0x20484000, Value:0x00000000
+I: Record 32 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:484, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a900088, Value:0x20484004
+I: Record 33 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:496, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a90008c, Value:0x00000000
+I: Record 34 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:469, ethosu_dev_run_command_stream): Type:READ, Address:0x20480000, Value:0x00000000
+I: Record 35 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:484, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a900090, Value:0x20480004
+I: Record 36 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:496, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a900094, Value:0x00000000
+I: Record 37 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:469, ethosu_dev_run_command_stream): Type:READ, Address:0x20484000, Value:0x00000000
+I: Record 38 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:484, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a900098, Value:0x20484004
+I: Record 39 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:496, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a90009c, Value:0x00000000
+I: Record 40 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:469, ethosu_dev_run_command_stream): Type:READ, Address:0x20484000, Value:0x00000000
+I: Record 41 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:484, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a9000a0, Value:0x20484004
+I: Record 42 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:496, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a9000a4, Value:0x00000000
+I: Record 43 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:510, ethosu_dev_run_command_stream): Type:READ, Address:0x4a900008, Value:0x00000000
+I: Record 45 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:594, ethosu_dev_handle_interrupt): Type:READ, Address:0x4a900008, Value:0x00000000
+I: Record 46 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:609, ethosu_dev_handle_interrupt): Type:WRITE, Address:0x4a900008, Value:0x00000002
+I: Record 47 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:625, ethosu_dev_handle_interrupt): Type:READ, Address:0x4a900004, Value:0xffff0020
+I: Record 48 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:636, ethosu_dev_handle_interrupt): Type:READ, Address:0x4a900018, Value:0x000000f0
+I: Record 49 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:675, ethosu_dev_handle_interrupt): Type:READ, Address:0x20484000, Value:0x00000000
+I: Record 44 (/home/rejoice/new/My_ethosu_firmware/middleware/ethos-u-core-software/core_driver/src/ethosu_device_u55_u65.c:521, ethosu_dev_run_command_stream): Type:WRITE, Address:0x4a900008, Value:0x00000001
+
